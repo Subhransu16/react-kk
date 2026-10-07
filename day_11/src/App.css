@@ -1,0 +1,97 @@
+/* App.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Each task */
+.task {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.task h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Text */
+.task p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 10px 18px;
+  margin: 10px 8px 0 0;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Employee / course items */
+.item {
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+}
+
+/* Employee details */
+.employee {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #f8fafc;
+  border-left: 4px solid #2563eb;
+  border-radius: 5px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .task {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
