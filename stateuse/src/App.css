@@ -251,3 +251,16 @@
 .input-output {
   margin-top: 12px;
 }
+
+.skill-list {
+  display: inline-block;
+  margin: 12px 0;
+  padding-left: 24px;
+  text-align: left;
+}
+
+.student-details {
+  display: grid;
+  gap: 4px;
+  margin: 12px 0;
+}

@@ -1,0 +1,5 @@
+use effect => is a react hook use to syncoonyse the component with extranal systems
+ examoles:-> incluseing browser storage timmer bowser events and network requests
+and react rendering should calculate and display ui operations that incracts with things out side reacts rendering process 
+are called side effects and lets us perform that syncornyosh after react commits update to the screen intracts outside with the
+components rendrening process 

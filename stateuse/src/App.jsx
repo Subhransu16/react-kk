@@ -7,6 +7,13 @@ const App = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false)
   const [inputName, setInputName] = useState('')
   const [likes, setLikes] = useState(0)
+  const [skills, setSkills] = useState(['HTML', 'CSS', 'JavaScript'])
+  const [student, setStudent] = useState({
+    name: 'Arun',
+    age: 22,
+    course: 'React',
+  })
+  const [showDetails, setShowDetails] = useState(false)
 
   return (
     <main className="state-exercises">
@@ -62,6 +69,73 @@ const App = () => {
         <button onClick={() => setLikes((currentLikes) => currentLikes + 1)}>
           Like
         </button>
+      </section>
+
+      <section className="exercise">
+        <h2>Array State: Skills</h2>
+        <ul className="skill-list">
+          {skills.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+        <div className="button-group">
+          <button onClick={() => setSkills((currentSkills) => [...currentSkills, 'React'])}>
+            Add React
+          </button>
+          <button
+            onClick={() =>
+              setSkills((currentSkills) =>
+                currentSkills.map((skill) =>
+                  skill === 'JavaScript' ? 'Advanced JavaScript' : skill,
+                ),
+              )
+            }
+          >
+            Update JavaScript
+          </button>
+        </div>
+      </section>
+
+      <section className="exercise">
+        <h2>Object State: Student</h2>
+        <div className="student-details">
+          <p>Name: {student.name}</p>
+          <p>Age: {student.age}</p>
+          <p>Course: {student.course}</p>
+          {student.city && <p>City: {student.city}</p>}
+        </div>
+        <div className="button-group">
+          <button
+            onClick={() =>
+              setStudent((currentStudent) => ({
+                ...currentStudent,
+                course: 'MERN',
+              }))
+            }
+          >
+            Update Course
+          </button>
+          <button
+            onClick={() =>
+              setStudent((currentStudent) => ({
+                ...currentStudent,
+                city: 'Chennai',
+              }))
+            }
+          >
+            Add City
+          </button>
+        </div>
+      </section>
+
+      <section className="exercise">
+        <h2>Toggle Student Details</h2>
+        <button onClick={() => setShowDetails((prev) => !prev)}>
+          {showDetails ? 'Hide Details' : 'Show Details'}
+        </button>
+        {showDetails ? (
+          <p className="exercise-value">Student Details</p>
+        ) : null}
       </section>
     </main>
   )
